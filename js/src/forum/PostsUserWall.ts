@@ -3,43 +3,45 @@ import DiscussionListItem from 'flarum/forum/components/DiscussionListItem';
 import PostStream from 'flarum/forum/components/PostStream';
 import Post from 'flarum/common/models/Post';
 import PostStreamState from 'flarum/forum/states/PostStreamState';
+import Discussion from 'flarum/common/models/Discussion';
+import { ApiResponseSingle } from 'flarum/common/Store';
+import Model from 'flarum/common/Model';
 export default class PostsUserWall {
+  selectedDiscussion: Discussion;
+  stream: PostStreamState;
 
-  constructor(selectedDiscussion, stream) {
-  
-    this.selectedDiscussion = selectedDiscussion;  // Assigning the 'name' attribute to the class
-    this.stream = stream;    // Assigning the 'age' attribute to the class
-    console.log(this.selectedDiscussion)
-    console.log(this.selectedDiscussion)
-  }
 
-  oninit(vnode) {
+  constructor(selectedDiscussion: Discussion, stream: PostStreamState) {
 
     this.selectedDiscussion = selectedDiscussion;  // Assigning the 'name' attribute to the class
     this.stream = stream;    // Assigning the 'age' attribute to the class
 
   }
- 
+  /*
+    oninit(vnode) {
   
+      this.selectedDiscussion = selectedDiscussion;  // Assigning the 'name' attribute to the class
+      this.stream = stream;    // Assigning the 'age' attribute to the class
+  
+    }*/
 
 
- 
+
+
+
   view() {
+
    
-    if(this.selectedDiscussion && this.stream){
-    return m('div', { className: 'DiscussionPage-stream' }, 
-                  m(PostStream, {
-                    discussion: this.selectedDiscussion,
-                    stream: this.stream,
-                    onPositionChange: this.positionChanged.bind(this) // Position handler
-                  })
-                
-    );
-                }
+      return m('div', { className: 'DiscussionPage-stream' },
+        m(PostStream, {
+          discussion: this.selectedDiscussion,
+          stream: this.stream,
+          //onPositionChange: this.positionChanged.bind(this) 
+        })
+
+      );
+    
   }
 
-  positionChanged() {
-    // Handle position change in the PostStream, e.g., infinite scrolling
-    console.log('Post stream position changed');
-  }
+
 }

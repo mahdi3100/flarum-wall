@@ -25,7 +25,7 @@ class DiscussionWallController extends AbstractShowController
             throw new \Flarum\Api\Exception\ResourceNotFoundException('No discussions found for the given discussion_wall ID.');
         }
 
-        // Transform discussions to a JSON API format
+       
         return $this->respondWithDiscussions($discussions);
      }
      throw new \Flarum\Api\Exception\ResourceNotFoundException('No User found for the given Username.');
@@ -38,9 +38,6 @@ class DiscussionWallController extends AbstractShowController
             'data' => $discussions->map(function ($discussion) {
                 return [
                     'id' => $discussion->id,
-               
-                    
-                    // Add any other fields you want to return
                 ];
             })->toArray(),
         ];

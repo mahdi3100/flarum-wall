@@ -10,7 +10,7 @@
  */
 
 //namespace Leo\ProfileUsersComments\;
-use Flarum\Logger\Logger;
+
 
 use Flarum\Extend;
 use Leo\ProfileUsersComments\entController\DiscussionWallController;
@@ -28,7 +28,7 @@ use Flarum\Discussion\Event\Saving as DiscussionSaving ;
 use Flarum\Discussion\DiscussionRepository;
 use Leo\ProfileUsersComments\ScopeDiscussionVisibility;
 use Leo\ProfileUsersComments\CustomDiscussionRepository;
-use Leo\ProfileUsersComments\CustomRequestProvider;
+use Leo\ProfileUsersComments\ScopeRequestProvider;
 use Leo\ProfileUsersComments\DiscussionNotification;
 
 
@@ -47,20 +47,22 @@ return [
         
     new Extend\Locales(__DIR__.'/locale'),
 
-   // protected $fillable ==> /var/www/html/flarum/vendor/illuminate/database/Eloquent/Concerns/GuardsAttributes.php
-
+  
  
 
+    ///profile-users-comments/js/src/forum/UserWall.tsx app.request 
    (new Extend\Routes('api'))
+   ->get('/wall-discussion-id', 'wall-discussion-id', Leo\ProfileUsersComments\WallDicussionId::class),
    //->get('/wall-discussion/{username}', 'wall-discussion.show', DiscussionWallController::class)
-      ->get('/wall-discussion-id', 'wall-discussion-id', Leo\ProfileUsersComments\WallDicussionId::class),
-/*
-(new Extend\Model(Discussion::class))
-->cast('discussions_wall', 'string'),*/
+
+
 (new Extend\Model(Discussion::class))
 ->relationship('user', function ($discussion) {
-    return $discussion->belongsTo(User::class, 'discussions_wall'); // This establishes the belongsTo relationship
+    return $discussion->belongsTo(User::class, 'discussions_wall'); 
 }),
+
+
+//Inject data of discussions_wall when saving a thread
 (new Extend\Event())
 ->listen(DiscussionSaving::class, DiscussionWallCreate::class),
 //->listen(Saving::class, ModifyDiscussionQuery::class),
@@ -79,11 +81,12 @@ return [
  (new Extend\ServiceProvider())
  ->register(CustomRequestProvider::class),
 */
-(new Extend\ServiceProvider())
-->register(CustomRequestProvider::class),
 
-(new Extend\Notification())
-->type(DiscussionNotification::class, DiscussionSerializer::class, ['alert'])
+//for scope to hide THread 
+(new Extend\ServiceProvider())
+->register(ScopeRequestProvider::class),
+
+
 
 
 /*

@@ -14,11 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_admin_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_app__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/common/extend */ "flarum/common/extend");
 /* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var flarum_forum_components_HeaderPrimary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/forum/components/HeaderPrimary */ "flarum/forum/components/HeaderPrimary");
-/* harmony import */ var flarum_forum_components_HeaderPrimary__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_components_HeaderPrimary__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/admin/components/AdminPage */ "flarum/admin/components/AdminPage");
-/* harmony import */ var flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/admin/components/AdminPage */ "flarum/admin/components/AdminPage");
+/* harmony import */ var flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -26,23 +23,10 @@ flarum_admin_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leo/pr
   console.log('[leo/profile-users-comments] Hello, admin!');
 
   // Extend the AdminPage and add your custom box component
-  (0,flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__.extend)((flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_3___default().prototype), 'content', function (items) {
+  (0,flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__.extend)((flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_2___default().prototype), 'content', function (items) {
     console.log('Adding custom box to admin panel');
-    //items.add('custom-box', <Box />, 10); // Using your Box component
-    // Or using a simple paragraph for testing
-    items.add('custom-box', m("p", null, "This is a simple paragraph in the admin panel."), 10);
   });
 });
-var callContent = function callContent() {
-  console.log('callContent is being executed'); // Debugging
-  (0,flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__.extend)((flarum_forum_components_HeaderPrimary__WEBPACK_IMPORTED_MODULE_2___default().prototype), 'items', function (items) {
-    items.add('google', m("a", {
-      href: "https://www.google.com",
-      target: "_blank",
-      rel: "noopener noreferrer"
-    }, "Google"));
-  });
-};
 
 /***/ }),
 
@@ -104,17 +88,6 @@ module.exports = flarum.core.compat['common/app'];
 
 "use strict";
 module.exports = flarum.core.compat['common/extend'];
-
-/***/ }),
-
-/***/ "flarum/forum/components/HeaderPrimary":
-/*!***********************************************************************!*\
-  !*** external "flarum.core.compat['forum/components/HeaderPrimary']" ***!
-  \***********************************************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = flarum.core.compat['forum/components/HeaderPrimary'];
 
 /***/ })
 

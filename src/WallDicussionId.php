@@ -30,7 +30,7 @@ class WallDicussionId extends AbstractShowController
         $username = Arr::get($request->getQueryParams(), 'username');
  
         $user = User::where('username', $username)->first();
-        /*already hundle by Flarum data:null
+        /*already hundled by Flarum data:null
         if (!$user) {
             throw new ResourceNotFoundException('No User found for the given Username.');
         }*/
@@ -41,7 +41,7 @@ class WallDicussionId extends AbstractShowController
         // Find all discussions with the specified discussion_wall value
         $discussions = Discussion::where('discussions_wall', $userID)->first();
         
-      /*already hundle by Flarum data:null
+      /*already hundled by Flarum data:null
         if (!$discussions) {
            throw new \Flarum\Api\Exception\ResourceNotFoundException('No discussions found for the given discussion_wall ID.');
         }*/

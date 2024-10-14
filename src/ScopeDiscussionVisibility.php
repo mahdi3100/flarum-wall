@@ -12,10 +12,10 @@ class ScopeDiscussionVisibility
 {
     public function __invoke(User $actor, Builder $query): void
     {
-          // Use the ServerRequestFactory to create a request object
+       
           $request = ServerRequestFactory::fromGlobals();
 
-        // Get the referer header
+        
         $referer = $request->getHeaderLine('referer');
      
         //Index page

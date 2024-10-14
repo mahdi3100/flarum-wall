@@ -198,7 +198,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/common/extend */ "flarum/common/extend");
 /* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_common_extend__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _UserWall__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UserWall */ "./src/forum/UserWall.tsx");
-// src/forum/extend.ts or src/forum/extend.js
 
 
 
@@ -269,17 +268,10 @@ var PostsUserWall = /*#__PURE__*/function (_DiscussionPage) {
     _this = _DiscussionPage.call(this) || this;
     _this.selectedDiscussion = void 0;
     _this.stream = void 0;
-    _this.selectedDiscussion = selectedDiscussion; // Assigning the 'name' attribute to the class
-    _this.stream = stream; // Assigning the 'age' attribute to the class
+    _this.selectedDiscussion = selectedDiscussion;
+    _this.stream = stream;
     return _this;
   }
-  /*
-    oninit(vnode) {
-  
-      this.selectedDiscussion = selectedDiscussion;  // Assigning the 'name' attribute to the class
-      this.stream = stream;    // Assigning the 'age' attribute to the class
-  
-    }*/
   (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(PostsUserWall, _DiscussionPage);
   var _proto = PostsUserWall.prototype;
   _proto.view = function view() {
@@ -320,7 +312,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_forum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! flarum/forum/states/PostStreamState */ "flarum/forum/states/PostStreamState");
 /* harmony import */ var flarum_forum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_6__);
 
-// src/forum/extend.js
 
 
 

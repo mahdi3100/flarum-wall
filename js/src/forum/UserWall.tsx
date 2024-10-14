@@ -1,7 +1,6 @@
-// src/forum/extend.js
 import app from 'flarum/forum/app';
 import UserPage, { IUserPageAttrs } from 'flarum/forum/components/UserPage';
-import { extend } from 'flarum/common/extend';
+
 import MyDecomposerButton from './MyDecomposerButton';
 
 import DiscussionListState from 'flarum/forum/states/DiscussionListState';

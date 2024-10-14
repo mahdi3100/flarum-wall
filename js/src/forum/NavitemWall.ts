@@ -1,11 +1,11 @@
-// src/forum/extend.ts or src/forum/extend.js
+
 import app from 'flarum/forum/app';
 import UserPage from 'flarum/forum/components/UserPage';
 import { extend } from 'flarum/common/extend';
 
 
 
-import UserWall from './UserWall'
+import UserWall from './UserWall';
 
 export function initializeItemWall() {
   console.log('[leo/profile-users-comments] Initializing extension...');

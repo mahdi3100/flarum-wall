@@ -20,22 +20,11 @@ export default class PostsUserWall extends DiscussionPage {
   constructor(selectedDiscussion: Discussion, stream: PostStreamState) {
 
     super();
-    this.selectedDiscussion = selectedDiscussion;  // Assigning the 'name' attribute to the class
-    this.stream = stream;    // Assigning the 'age' attribute to the class
+    this.selectedDiscussion = selectedDiscussion; 
+    this.stream = stream;    
 
   }
-  /*
-    oninit(vnode) {
   
-      this.selectedDiscussion = selectedDiscussion;  // Assigning the 'name' attribute to the class
-      this.stream = stream;    // Assigning the 'age' attribute to the class
-  
-    }*/
-
-
-
-
-
   view() {
 
    

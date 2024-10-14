@@ -73,7 +73,7 @@ export default class WallUserPage extends UserPage<IUserPageAttrs, DiscussionLis
         console.log('Discussions: ID', response);
         this.loading = false;
 
-        if (!response?.data?.id) { return; } //dsiplay this.composeButton.component()
+        if (!response?.data?.id) {m.redraw(); return; } //dsiplay this.composeButton.component()
 
 
         this.loadDiscussion(response.data.id);

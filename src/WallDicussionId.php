@@ -46,7 +46,7 @@ class WallDicussionId extends AbstractShowController
            throw new \Flarum\Api\Exception\ResourceNotFoundException('No discussions found for the given discussion_wall ID.');
         }*/
 
-        // Transform discussions to a JSON API format
+    
      
         return $discussions->id;
  

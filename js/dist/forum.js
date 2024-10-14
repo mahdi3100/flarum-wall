@@ -250,15 +250,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ PostsUserWall)
 /* harmony export */ });
-/* harmony import */ var flarum_forum_components_PostStream__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/forum/components/PostStream */ "flarum/forum/components/PostStream");
-/* harmony import */ var flarum_forum_components_PostStream__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_components_PostStream__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var flarum_forum_components_PostStream__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/forum/components/PostStream */ "flarum/forum/components/PostStream");
+/* harmony import */ var flarum_forum_components_PostStream__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_components_PostStream__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var flarum_forum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/forum/components/DiscussionPage */ "flarum/forum/components/DiscussionPage");
+/* harmony import */ var flarum_forum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_2__);
 
-var PostsUserWall = /*#__PURE__*/function () {
+
+
+
+/**
+ * The extending DiscussionPage is for its method "positionChanged"
+ * Not yet tested !
+ */
+var PostsUserWall = /*#__PURE__*/function (_DiscussionPage) {
   function PostsUserWall(selectedDiscussion, stream) {
-    this.selectedDiscussion = void 0;
-    this.stream = void 0;
-    this.selectedDiscussion = selectedDiscussion; // Assigning the 'name' attribute to the class
-    this.stream = stream; // Assigning the 'age' attribute to the class
+    var _this;
+    _this = _DiscussionPage.call(this) || this;
+    _this.selectedDiscussion = void 0;
+    _this.stream = void 0;
+    _this.selectedDiscussion = selectedDiscussion; // Assigning the 'name' attribute to the class
+    _this.stream = stream; // Assigning the 'age' attribute to the class
+    return _this;
   }
   /*
     oninit(vnode) {
@@ -267,18 +280,19 @@ var PostsUserWall = /*#__PURE__*/function () {
       this.stream = stream;    // Assigning the 'age' attribute to the class
   
     }*/
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(PostsUserWall, _DiscussionPage);
   var _proto = PostsUserWall.prototype;
   _proto.view = function view() {
     return m('div', {
       className: 'DiscussionPage-stream'
-    }, m((flarum_forum_components_PostStream__WEBPACK_IMPORTED_MODULE_0___default()), {
+    }, m((flarum_forum_components_PostStream__WEBPACK_IMPORTED_MODULE_1___default()), {
       discussion: this.selectedDiscussion,
-      stream: this.stream
-      //onPositionChange: this.positionChanged.bind(this) 
+      stream: this.stream,
+      onPositionChange: this.positionChanged.bind(this)
     }));
   };
   return PostsUserWall;
-}();
+}((flarum_forum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_2___default()));
 
 
 /***/ }),
@@ -363,6 +377,7 @@ var WallUserPage = /*#__PURE__*/function (_UserPage) {
       console.log('Discussions: ID', response);
       _this3.loading = false;
       if (!(response != null && (_response$data = response.data) != null && _response$data.id)) {
+        m.redraw();
         return;
       } //dsiplay this.composeButton.component()
 
@@ -535,6 +550,17 @@ module.exports = flarum.core.compat['forum/app'];
 
 "use strict";
 module.exports = flarum.core.compat['forum/components/DiscussionComposer'];
+
+/***/ }),
+
+/***/ "flarum/forum/components/DiscussionPage":
+/*!************************************************************************!*\
+  !*** external "flarum.core.compat['forum/components/DiscussionPage']" ***!
+  \************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = flarum.core.compat['forum/components/DiscussionPage'];
 
 /***/ }),
 

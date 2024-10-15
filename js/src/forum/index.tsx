@@ -1,5 +1,5 @@
 import app from 'flarum/forum/app';
-//import { initializeItemWall } from './NavitemWall';
+import { initializeItemWall } from './NavitemWall';
 
 
 app.initializers.add('leomahdi/flarum-wall', () => {
@@ -7,7 +7,7 @@ app.initializers.add('leomahdi/flarum-wall', () => {
 
 
 // Call the function to register the routes and extend the UserPage
-//initializeItemWall(); 
+initializeItemWall(); 
 
 
  

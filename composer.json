@@ -26,9 +26,9 @@
             "title": "flarum-wall",
             "category": "",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
+                "name": "fas fa-comments",
+                "color": "white",
+                "backgroundColor": "purple"
             }
         },
         "flarum-cli": {

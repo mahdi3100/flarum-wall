@@ -7,9 +7,9 @@
  * LICENSE file that was distributed with this source code.
  */
 
- namespace Leo\ProfileUsersComments;
+ namespace Leomahdi\FlarumWall;
 
- use Leo\ProfileUsersComments\ScopeDiscussionVisibility;
+ use Leomahdi\FlarumWall\ScopeDiscussionVisibility;
 
 use Flarum\Foundation\AbstractServiceProvider;
 use Illuminate\Contracts\Events\Dispatcher;

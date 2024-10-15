@@ -1,6 +1,6 @@
 <?php
 
-namespace Leo\ProfileUsersComments;
+namespace Leomahdi\FlarumWall;
 
 use Flarum\Discussion\Event\Saving as DiscussionSaving;
 use Flarum\User\User;

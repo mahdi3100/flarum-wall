@@ -1,5 +1,5 @@
 {
-    "name": "leo/flarum-wall",
+    "name": "leomahdi/flarum-wall",
     "description": "Enables users to leave comments on individual user profiles, fostering interaction and engagement within the community",
     "keywords": [
         "flarum"
@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Leo\\ProfileUsersComments\\": "src/"
+            "Leomahdi\\FlarumWall\\": "src/"
         }
     },
     "extra": {
@@ -54,7 +54,7 @@
     "prefer-stable": true,
     "autoload-dev": {
         "psr-4": {
-            "Leo\\ProfileUsersComments\\Tests\\": "tests/"
+            "Leomahdi\\FlarumWall\\Tests\\": "tests/"
         }
     },
     "scripts": {

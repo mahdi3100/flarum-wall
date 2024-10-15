@@ -8,7 +8,7 @@ import { extend } from 'flarum/common/extend';
 import UserWall from './UserWall';
 
 export function initializeItemWall() {
-  console.log('[leo/flarum-wall] Initializing extension...');
+  console.log('[leomahdi/flarum-wall] Initializing extension...');
 
   //Register the frontend route without creating a new instance of Routes
   app.routes.userWall = {

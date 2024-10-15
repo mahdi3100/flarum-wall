@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Leo\ProfileUsersComments;
+namespace Leomahdi\FlarumWall;
 
 use Flarum\User\User;
 use Illuminate\Database\Eloquent\Builder;

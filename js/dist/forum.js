@@ -13,8 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/common/app */ "flarum/common/app");
 /* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_common_app__WEBPACK_IMPORTED_MODULE_0__);
 
-flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leo/flarum-wall', function () {
-  console.log('[leo/flarum-wall] Hello, forum and admin!');
+flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leomahdi/flarum-wall', function () {
+  console.log('[leomahdi/flarum-wall] Hello, forum and admin!');
 });
 
 /***/ }),
@@ -203,7 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function initializeItemWall() {
-  console.log('[leo/flarum-wall] Initializing extension...');
+  console.log('[leomahdi/flarum-wall] Initializing extension...');
 
   //Register the frontend route without creating a new instance of Routes
   (flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().routes).userWall = {
@@ -458,8 +458,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavitemWall__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavitemWall */ "./src/forum/NavitemWall.ts");
 
 
-flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leo/flarum-wall', function () {
-  console.log('[leo/flarum-wall] Hello, forum!');
+flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leomahdi/flarum-wall', function () {
+  console.log('[leomahdi/flarum-wall] Hello, forum!');
 
   // Call the function to register the routes and extend the UserPage
   (0,_NavitemWall__WEBPACK_IMPORTED_MODULE_1__.initializeItemWall)();

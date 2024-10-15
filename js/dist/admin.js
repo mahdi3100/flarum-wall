@@ -19,8 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-flarum_admin_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leo/flarum-wall', function () {
-  console.log('[leo/flarum-wall] Hello, admin!');
+flarum_admin_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leomahdi/flarum-wall', function () {
+  console.log('[leomahdi/flarum-wall] Hello, admin!');
 
   // Extend the AdminPage and add your custom box component
   (0,flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__.extend)((flarum_admin_components_AdminPage__WEBPACK_IMPORTED_MODULE_2___default().prototype), 'content', function (items) {
@@ -41,8 +41,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/common/app */ "flarum/common/app");
 /* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_common_app__WEBPACK_IMPORTED_MODULE_0__);
 
-flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leo/flarum-wall', function () {
-  console.log('[leo/flarum-wall] Hello, forum and admin!');
+flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('leomahdi/flarum-wall', function () {
+  console.log('[leomahdi/flarum-wall] Hello, forum and admin!');
 });
 
 /***/ }),

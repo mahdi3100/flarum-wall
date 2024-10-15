@@ -1,6 +1,6 @@
 <?php
 
-namespace Leo\ProfileUsersComments;
+namespace Leomahdi\FlarumWall;
 
 use Flarum\Api\Controller\AbstractShowController;
 use Flarum\Http\RequestUtil;

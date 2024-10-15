@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of leo/flarum-wall.
+ * This file is part of leomahdi/flarum-wall.
  *
  * Copyright (c) 2024 leo mahdi.
  *
@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-//namespace Leo\ProfileUsersComments\;
+//namespace Leomahdi\FlarumWall\;
 
 use Flarum\Extend;
 use Flarum\Discussion\Discussion;
-use Leo\ProfileUsersComments\DiscussionWallCreate;
+use Leomahdi\FlarumWall\DiscussionWallCreate;
 use Flarum\Discussion\Event\Saving as DiscussionWallSaving ;
 //use Flarum\Discussion\Event\Deleting as DiscussionDeleting ;
-use Leo\ProfileUsersComments\ScopeRequestProvider;
-use Leo\ProfileUsersComments\WallDicussionId;
+use Leomahdi\FlarumWall\ScopeRequestProvider;
+use Leomahdi\FlarumWall\WallDicussionId;
 return [
 
    

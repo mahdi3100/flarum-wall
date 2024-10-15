@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of leo/profile-users-comments.
+ * This file is part of leo/flarum-wall.
  *
  * Copyright (c) 2024 leo mahdi.
  *
@@ -25,7 +25,7 @@ return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/less/forum.less'),
-       // ->route('/u/{username}/wall', 'leo.profile-users-comments.wall'),
+       // ->route('/u/{username}/wall', 'leo.flarum-wall.wall'),
         
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
@@ -36,7 +36,7 @@ return [
   
  
 
-    ///profile-users-comments/js/src/forum/UserWall.tsx app.request 
+    ///flarum-wall/js/src/forum/UserWall.tsx app.request 
    (new Extend\Routes('api'))
    ->get('/wall-discussion-id', 'wall-discussion-id', WallDicussionId::class),
 

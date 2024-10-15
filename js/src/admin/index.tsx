@@ -7,8 +7,8 @@ import AdminPage from 'flarum/admin/components/AdminPage';
 
 
 
-app.initializers.add('leo/profile-users-comments', () => {
-  console.log('[leo/profile-users-comments] Hello, admin!');
+app.initializers.add('leo/flarum-wall', () => {
+  console.log('[leo/flarum-wall] Hello, admin!');
 
 
 // Extend the AdminPage and add your custom box component

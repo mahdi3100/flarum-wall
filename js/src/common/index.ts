@@ -1,5 +1,5 @@
 import app from 'flarum/common/app';
 
-app.initializers.add('leo/profile-users-comments', () => {
-  console.log('[leo/profile-users-comments] Hello, forum and admin!');
+app.initializers.add('leo/flarum-wall', () => {
+  console.log('[leo/flarum-wall] Hello, forum and admin!');
 });

@@ -1,4 +1,4 @@
-name: Profile-users-comments PHP
+name: flarum-wall PHP
 
 on: [workflow_dispatch, push, pull_request]
 

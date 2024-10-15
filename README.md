@@ -1,6 +1,6 @@
-# Profile-users-comments
+# flarum-wall
 
-![License](https://img.shields.io/badge/license-MIT-Wu-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/leo/profile-users-comments.svg)](https://packagist.org/packages/leo/profile-users-comments) [![Total Downloads](https://img.shields.io/packagist/dt/leo/profile-users-comments.svg)](https://packagist.org/packages/leo/profile-users-comments)
+![License](https://img.shields.io/badge/license-MIT-Wu-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/leo/flarum-wall.svg)](https://packagist.org/packages/leo/flarum-wall) [![Total Downloads](https://img.shields.io/packagist/dt/leo/flarum-wall.svg)](https://packagist.org/packages/leo/flarum-wall)
 
 A [Flarum](http://flarum.org) extension. Enables users to leave comments on individual user profiles, fostering interaction and engagement within the community
 
@@ -9,19 +9,19 @@ A [Flarum](http://flarum.org) extension. Enables users to leave comments on indi
 Install with composer:
 
 ```sh
-composer require leo/profile-users-comments:"*"
+composer require leo/flarum-wall:"*"
 ```
 
 ## Updating
 
 ```sh
-composer update leo/profile-users-comments:"*"
+composer update leo/flarum-wall:"*"
 php flarum migrate
 php flarum cache:clear
 ```
 
 ## Links
 
-- [Packagist](https://packagist.org/packages/leo/profile-users-comments)
-- [GitHub](https://github.com/leo/profile-users-comments)
+- [Packagist](https://packagist.org/packages/leo/flarum-wall)
+- [GitHub](https://github.com/leo/flarum-wall)
 - [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)

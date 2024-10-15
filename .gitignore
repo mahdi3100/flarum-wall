@@ -2,6 +2,8 @@
 composer.lock
 composer.phar
 
+js/dist/*
+
 .DS_Store
 Thumbs.db
 tests/.phpunit.result.cache

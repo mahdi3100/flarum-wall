@@ -318,6 +318,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+//import { Vnode } from 'mithril';
 var WallUserPage = /*#__PURE__*/function (_UserPage) {
   function WallUserPage() {
     var _this;
@@ -408,7 +410,7 @@ var WallUserPage = /*#__PURE__*/function (_UserPage) {
         }).slice(0, 20);
       }
       _this4.selectedDiscussion = discussion;
-      _this4.stream = new (flarum_forum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_6___default())(discussion, includedPosts); //null //discussions.postStream();
+      _this4.stream = new (flarum_forum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_6___default())(_this4.selectedDiscussion, includedPosts); //null //discussions.postStream();
 
       _this4.postsUserWall = new _PostsUserWall__WEBPACK_IMPORTED_MODULE_4__["default"](_this4.selectedDiscussion, _this4.stream);
       m.redraw();

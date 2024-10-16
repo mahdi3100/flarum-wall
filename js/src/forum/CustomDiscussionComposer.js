@@ -3,13 +3,11 @@ import DiscussionComposer from 'flarum/forum/components/DiscussionComposer';
 import Stream from 'flarum/common/utils/Stream';
 
 export default class CustomDiscussionComposer extends DiscussionComposer {
-
   static initAttrs(attrs) {
     super.initAttrs(attrs);
 
-    attrs.titlePlaceholder = "Create a thread ! "
-    attrs.submitLabel = "Create a thread  ! "
-
+    attrs.titlePlaceholder = 'Create a thread ! ';
+    attrs.submitLabel = 'Create a thread  ! ';
   }
 
   oninit(vnode) {
@@ -20,7 +18,7 @@ export default class CustomDiscussionComposer extends DiscussionComposer {
       title: Stream(''),
       content: Stream(''),
       tags: Stream([]),
-      discussions_wall: Stream(1)
+      discussions_wall: Stream(1),
     };
   }
   data() {
@@ -30,7 +28,6 @@ export default class CustomDiscussionComposer extends DiscussionComposer {
     data.discussions_wall = this.fields.discussions_wall();
     return data;
   }
-
 
   onsubmit() {
     this.loading = true;
@@ -46,7 +43,7 @@ export default class CustomDiscussionComposer extends DiscussionComposer {
 
     const data = this.data();
 
-    console.log(data)
+    console.log(data);
     // Create and save the discussion
     app.store
       .createRecord('discussions')
@@ -55,10 +52,10 @@ export default class CustomDiscussionComposer extends DiscussionComposer {
         // After success, redirect to the new discussion
         //this is the daufalt m.route.set(app.route.discussion(discussion));
         //I i tried this but it did not work m.route.set(app.route.userWall());
-        //I tried this but it did not re-render m.route.set(`/u/${m.route.param('username')}/wall`,null); 
+        //I tried this but it did not re-render m.route.set(`/u/${m.route.param('username')}/wall`,null);
         //So i used EventEmitter :
         if (app.redrawHandler) {
-          app.redrawHandler(discussion.id());  // Trigger redraw via the global handler
+          app.redrawHandler(discussion.id()); // Trigger redraw via the global handler
         }
 
         // Hide the composer
@@ -72,6 +69,4 @@ export default class CustomDiscussionComposer extends DiscussionComposer {
         alert('There was an error creating the discussion.');
       });
   }
-
-
 }

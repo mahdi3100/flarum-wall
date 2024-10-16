@@ -3,9 +3,8 @@ import Button from 'flarum/common/components/Button';
 
 import CustomDiscussionComposer from './CustomDiscussionComposer';
 
-
 /**
- * Button Component that shown in Wall Content => to invoke CustomDiscussionComposer 
+ * Button Component that shown in Wall Content => to invoke CustomDiscussionComposer
  */
 export default class CustomDiscussionButton {
   /*view() {
@@ -14,7 +13,7 @@ export default class CustomDiscussionButton {
       m('div.Post-container', [
           /*m('div.Post-side', [
               m(Avatar, { user: app.session.user, className: 'Post-avatar' })
-          ]),*//*
+          ]),*/ /*
   m('div.Post-main', [
     m('span.Post-header', "Create a thread ! ")
 ])
@@ -23,7 +22,6 @@ export default class CustomDiscussionButton {
 }*/
 
   component() {
-
     return Button.component(
       {
         icon: 'fas fa-pen',
@@ -31,14 +29,14 @@ export default class CustomDiscussionButton {
         onclick: this.action.bind(this),
         //disabled: !this.canStartDiscussion,
       },
-      "Create a thread !");
+      'Create a thread !'
+    );
   }
   action(e: any) {
     e.preventDefault();
 
     return new Promise((resolve, reject) => {
       if (app.session.user) {
-
         app.composer.load(CustomDiscussionComposer, {
           user: app.session.user,
           titlePlaceholder: app.translator.trans('core.forum.composer_discussion.title_placeholder'),
@@ -55,7 +53,4 @@ export default class CustomDiscussionButton {
       }
     });
   }
-
-
-
 }

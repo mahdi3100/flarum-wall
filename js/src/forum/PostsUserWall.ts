@@ -7,7 +7,6 @@ import Discussion from 'flarum/common/models/Discussion';
 
 import DiscussionPage from 'flarum/forum/components/DiscussionPage';
 
-
 /**
  * The extending DiscussionPage is for its method "positionChanged"
  * Not yet tested !
@@ -16,28 +15,21 @@ export default class PostsUserWall extends DiscussionPage {
   selectedDiscussion: Discussion;
   stream: PostStreamState;
 
-
   constructor(selectedDiscussion: Discussion, stream: PostStreamState) {
-
     super();
-    this.selectedDiscussion = selectedDiscussion; 
-    this.stream = stream;    
-
+    this.selectedDiscussion = selectedDiscussion;
+    this.stream = stream;
   }
-  
+
   view() {
-
-   
-      return m('div', { className: 'DiscussionPage-stream' },
-        m(PostStream, {
-          discussion: this.selectedDiscussion,
-          stream: this.stream,
-          onPositionChange: this.positionChanged.bind(this) 
-        })
-
-      );
-    
+    return m(
+      'div',
+      { className: 'DiscussionPage-stream' },
+      m(PostStream, {
+        discussion: this.selectedDiscussion,
+        stream: this.stream,
+        onPositionChange: this.positionChanged.bind(this),
+      })
+    );
   }
- 
-
 }

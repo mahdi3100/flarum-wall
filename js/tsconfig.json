@@ -13,7 +13,7 @@
       
 ],
   "compilerOptions": {
-  
+    "strict": false, // disables all strict type-checking options
     // This will output typings to `dist-typings`
     "declarationDir": "./dist-typings",
     "baseUrl": ".",

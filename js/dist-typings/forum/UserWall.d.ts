@@ -2,7 +2,7 @@ import UserPage, { IUserPageAttrs } from 'flarum/forum/components/UserPage';
 import MyDecomposerButton from './MyDecomposerButton';
 import DiscussionListState from 'flarum/forum/states/DiscussionListState';
 import User from 'flarum/common/models/User';
-import PostsUserWall from "./PostsUserWall";
+import PostsUserWall from './PostsUserWall';
 import PostStreamState from 'flarum/forum/states/PostStreamState';
 import Discussion from 'flarum/common/models/Discussion';
 export default class WallUserPage extends UserPage<IUserPageAttrs, DiscussionListState> {

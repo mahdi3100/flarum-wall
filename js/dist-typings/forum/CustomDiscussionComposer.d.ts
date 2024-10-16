@@ -6,6 +6,6 @@ export default class CustomDiscussionComposer extends DiscussionComposer {
         content: any;
         tags: any;
         discussions_wall: any;
-    } | undefined;
+    };
 }
 import DiscussionComposer from 'flarum/forum/components/DiscussionComposer';

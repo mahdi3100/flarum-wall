@@ -334,6 +334,7 @@ var WallUserPage = /*#__PURE__*/function (_UserPage) {
   var _proto = WallUserPage.prototype;
   _proto.oninit = function oninit(vnode) {
     var _this2 = this;
+    // Mithril.Vnode<IUserPageAttrs, this>=> import Mithril from 'mithril';
     _UserPage.prototype.oninit.call(this, vnode);
     this.loadUser(m.route.param('username'));
 

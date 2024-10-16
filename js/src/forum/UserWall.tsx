@@ -4,7 +4,7 @@ import UserPage, { IUserPageAttrs } from 'flarum/forum/components/UserPage';
 import MyDecomposerButton from './MyDecomposerButton';
 
 import DiscussionListState from 'flarum/forum/states/DiscussionListState';
-import Mithril from 'mithril';
+
 import User from 'flarum/common/models/User';
 import PostsUserWall from "./PostsUserWall"
 
@@ -33,7 +33,7 @@ export default class WallUserPage extends UserPage<IUserPageAttrs, DiscussionLis
     this.getIdThread();
 
   }
-  oninit(vnode: Mithril.Vnode<IUserPageAttrs, this>) {
+  oninit(vnode) {// Mithril.Vnode<IUserPageAttrs, this>=> import Mithril from 'mithril';
     super.oninit(vnode);
 
 

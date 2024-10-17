@@ -3,7 +3,7 @@ composer.lock
 composer.phar
 
 js/dist/*
-
+js/dist-typings/*
 .DS_Store
 Thumbs.db
 tests/.phpunit.result.cache

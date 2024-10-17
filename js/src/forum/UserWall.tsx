@@ -16,7 +16,14 @@ import Discussion from 'flarum/common/models/Discussion';
 
 import { ApiResponseSingle } from 'flarum/common/Store';
 import Model from 'flarum/common/Model';
+import ForumApplication from 'flarum/forum/ForumApplication';
 //import { Vnode } from 'mithril';
+
+interface ForumApplicationExtended extends ForumApplication {
+  redrawHandler?: (newIdDiscussion: string) => void;
+}
+
+
 interface ResponseApiLeo {
   data?: any;
   [key: string]: any;
@@ -45,8 +52,9 @@ export default class WallUserPage extends UserPage<IUserPageAttrs, DiscussionLis
     this.composeButton = new MyDecomposerButton();
 
     //For redrawing this component when new discussion is being submitted. fired by CustomDiscussionComposer
-    app.redrawHandler = (newIdDiscission: string) => {
-      this.loadDiscussion(newIdDiscission);
+    (app as ForumApplicationExtended).redrawHandler = (newIdDiscussion: string) => {
+      // Implement your redraw handler logic here
+      this.loadDiscussion(newIdDiscussion);
     };
 
     this.loading = true;

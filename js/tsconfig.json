@@ -19,6 +19,7 @@
     "baseUrl": ".",
     "paths": {
       "flarum/*": ["../vendor/flarum/core/js/dist-typings/*"],
+      "@types/*": ["./node_modules/@types/*"]
 // <CUSTOM-2>
 // </CUSTOM-2>
     }
